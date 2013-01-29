@@ -10,3 +10,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'hirb-unicode'
+end
