@@ -1,0 +1,1 @@
+coffee -bcw -o public/app sencha
