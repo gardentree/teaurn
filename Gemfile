@@ -11,6 +11,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'haml'
+gem 'haml-rails'
+
 group :development do
   gem 'pry'
   gem 'pry-doc'
