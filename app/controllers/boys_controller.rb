@@ -2,11 +2,20 @@ class BoysController < ApplicationController
   # GET /boys
   # GET /boys.json
   def index
-    @boys = Boy.all
+    @boys = Boy.find(:all,limit: 20)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @boys }
+      format.json {
+        render json: @boys.to_json(
+          only: [:name,:age],
+          include: {
+            phrases: {
+              only: [:title,:line,:image]
+            }
+          }
+        )
+      }
     end
   end
 
