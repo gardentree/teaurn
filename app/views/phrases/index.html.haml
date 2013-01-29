@@ -1,0 +1,27 @@
+%h1 Listing phrases
+
+%table
+  %tr
+    %th Boy
+    %th Title
+    %th Line
+    %th Image
+    %th Number
+    %th
+    %th
+    %th
+
+  - @phrases.each do |phrase|
+    %tr
+      %td= phrase.boy
+      %td= phrase.title
+      %td= phrase.line
+      %td= phrase.image
+      %td= phrase.number
+      %td= link_to 'Show', phrase
+      %td= link_to 'Edit', edit_phrase_path(phrase)
+      %td= link_to 'Destroy', phrase, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Phrase', new_phrase_path
