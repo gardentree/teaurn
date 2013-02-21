@@ -1,4 +1,14 @@
 class PhrasesController < ApplicationController
+  def partial
+    keyword = params[:keyword]
+    @phrases = Phrase.where("title LIKE ? OR line LIKE ?","%#{keyword}%","%#{keyword}%")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @phrases }
+    end
+  end
+
   # GET /phrases
   # GET /phrases.json
   def index
