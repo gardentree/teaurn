@@ -12,7 +12,9 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Main'],
+    models: ['Phrase'],
+    views: ['Main','SlideViewer','SearchViewer','PhraseList'],
+    controllers: ['Search'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
