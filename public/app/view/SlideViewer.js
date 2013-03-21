@@ -14,7 +14,8 @@ Ext.define('teaurn.view.SlideViewer', {
     });
   },
   createContainer: function(boys) {
-    var boy, createIndex, images, index, phrase, scroll, verticals, _i, _j, _len, _len1, _ref;
+    var boy, createIndex, images, index, phrase, scroll, self, verticals, _i, _j, _len, _len1, _ref;
+    self = this;
     verticals = [];
     scroll = function(index) {
       var vertical, _i, _len, _results;
@@ -46,7 +47,13 @@ Ext.define('teaurn.view.SlideViewer', {
             xtype: 'image',
             src: phrase.image,
             width: 64,
-            height: 96
+            height: 96,
+            phrase: phrase,
+            listeners: {
+              tap: function() {
+                return self.fireEvent('favorite', this, this.phrase);
+              }
+            }
           });
         }
         vertical.push({

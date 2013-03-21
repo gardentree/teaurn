@@ -12,6 +12,7 @@ Ext.define 'teaurn.view.SlideViewer',
       success: (response) =>
         this.add this.createContainer(JSON.parse(response.responseText))
   createContainer: (boys)->
+    self = this
     verticals = []
 
     scroll = (index)->
@@ -38,6 +39,10 @@ Ext.define 'teaurn.view.SlideViewer',
             src: phrase.image
             width:64
             height:96
+            phrase:phrase
+            listeners:
+              tap: ->
+                self.fireEvent 'favorite',this,this.phrase
         vertical.push
           xtype: 'container'
           layout: 'hbox'

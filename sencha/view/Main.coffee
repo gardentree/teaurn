@@ -17,4 +17,9 @@ Ext.define 'teaurn.view.Main'
         xtype: 'searchviewer'
         iconCls: 'search'
       }
+      {
+        title: 'Favorite'
+        xtype: 'favoriteviewer'
+        iconCls: 'star'
+      }
     ]

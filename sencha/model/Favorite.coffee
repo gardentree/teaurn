@@ -1,4 +1,4 @@
-Ext.define 'teaurn.model.Phrase'
+Ext.define 'teaurn.model.Favorite'
   extend: 'Ext.data.Model'
   config:
     fields: [
@@ -8,7 +8,5 @@ Ext.define 'teaurn.model.Phrase'
       'image'
     ],
     proxy:
-      type: 'ajax'
-      url: '/phrases/partial.json'
-      reader:
-        type: 'json'
+      type: 'localstorage'
+      id: 'favorite'

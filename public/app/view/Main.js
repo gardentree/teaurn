@@ -15,6 +15,10 @@ Ext.define('teaurn.view.Main', {
         title: 'Search',
         xtype: 'searchviewer',
         iconCls: 'search'
+      }, {
+        title: 'Favorite',
+        xtype: 'favoriteviewer',
+        iconCls: 'star'
       }
     ]
   }

@@ -11,7 +11,7 @@ class BoysController < ApplicationController
           only: [:name,:age],
           include: {
             phrases: {
-              only: [:title,:line,:image]
+              only: [:number,:title,:line,:image]
             }
           }
         )
