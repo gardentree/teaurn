@@ -1,4 +1,4 @@
-Ext.define 'teaurn.view.Main'
+Ext.define 'teaurn.view.Main',
   extend: 'Ext.tab.Panel'
   xtype: 'mainview'
   requires: [

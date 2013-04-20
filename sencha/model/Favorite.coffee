@@ -1,4 +1,4 @@
-Ext.define 'teaurn.model.Favorite'
+Ext.define 'teaurn.model.Favorite',
   extend: 'Ext.data.Model'
   config:
     fields: [

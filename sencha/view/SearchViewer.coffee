@@ -1,4 +1,4 @@
-Ext.define 'teaurn.view.SearchViewer'
+Ext.define 'teaurn.view.SearchViewer',
   extend: 'Ext.Container'
   xtype: 'searchviewer'
   requires: [

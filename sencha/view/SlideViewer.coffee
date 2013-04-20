@@ -58,7 +58,7 @@ Ext.define 'teaurn.view.SlideViewer',
 
       index = createIndex(boy.phrases)
 
-      verticals.push Ext.create 'Ext.carousel.Carousel'
+      verticals.push Ext.create 'Ext.carousel.Carousel',
         direction: 'horizontal'
         directionLock: true
         items: [index].concat(images)

@@ -1,4 +1,4 @@
-Ext.define "teaurn.view.PhraseList"
+Ext.define "teaurn.view.PhraseList",
   extend: 'Ext.dataview.List'
   xtype: 'phraselist'
   requires: [

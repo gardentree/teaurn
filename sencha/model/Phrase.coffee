@@ -1,4 +1,4 @@
-Ext.define 'teaurn.model.Phrase'
+Ext.define 'teaurn.model.Phrase',
   extend: 'Ext.data.Model'
   config:
     fields: [

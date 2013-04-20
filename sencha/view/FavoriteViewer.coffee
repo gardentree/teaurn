@@ -1,4 +1,4 @@
-Ext.define 'teaurn.view.FavoriteViewer'
+Ext.define 'teaurn.view.FavoriteViewer',
   extend: 'Ext.dataview.List'
   xtype: 'favoriteviewer'
   requires: [

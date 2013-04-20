@@ -1,4 +1,4 @@
-Ext.define 'teaurn.controller.Search'
+Ext.define 'teaurn.controller.Search',
   extend: 'Ext.app.Controller'
   requires: [
     'teaurn.view.SearchViewer'

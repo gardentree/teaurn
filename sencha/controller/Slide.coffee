@@ -1,4 +1,4 @@
-Ext.define 'teaurn.controller.Slide'
+Ext.define 'teaurn.controller.Slide',
   extend: 'Ext.app.Controller'
   requires: [
     'teaurn.view.SlideViewer'
