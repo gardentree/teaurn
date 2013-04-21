@@ -2,14 +2,36 @@
 Ext.define('teaurn.view.SlideViewer', {
   extend: 'Ext.Container',
   xtype: 'slideviewer',
-  requires: ['Ext.Ajax', 'Ext.carousel.Carousel', 'Ext.Img'],
+  requires: ['Ext.Ajax', 'Ext.carousel.Carousel', 'Ext.Img', 'Ext.ux.PathMenu'],
   initialize: function() {
     var _this = this;
 
     return Ext.Ajax.request({
       url: '/boys.json',
       success: function(response) {
-        return _this.add(_this.createContainer(JSON.parse(response.responseText)));
+        _this.add(_this.createContainer(JSON.parse(response.responseText)));
+        return Ext.create('Ext.ux.PathMenu', {
+          bottom: 10,
+          left: 10,
+          items: [
+            {
+              iconCls: 'action',
+              cardIndex: 0
+            }, {
+              iconCls: 'add',
+              cardIndex: 1
+            }, {
+              iconCls: 'compose',
+              cardIndex: 2
+            }, {
+              iconCls: 'home',
+              cardIndex: 3
+            }, {
+              iconCls: 'refresh',
+              cardIndex: 4
+            }
+          ]
+        });
       }
     });
   },

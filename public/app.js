@@ -1,7 +1,8 @@
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'touch/src',
-    'teaurn': 'app'
+    'teaurn': 'app',
+    'Ext.ux': 'libs/ux',
 });
 //</debug>
 
@@ -12,6 +13,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    path: {'Ext.ux': 'libs/ux'},
     models: ['Phrase','Favorite'],
     views: ['Main','SlideViewer','SearchViewer','PhraseList','FavoriteViewer'],
     controllers: ['Slide','Search'],

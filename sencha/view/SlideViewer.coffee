@@ -5,12 +5,41 @@ Ext.define 'teaurn.view.SlideViewer',
     'Ext.Ajax'
     'Ext.carousel.Carousel'
     'Ext.Img'
+    'Ext.ux.PathMenu'
   ]
   initialize: ->
     Ext.Ajax.request
       url: '/boys.json',
       success: (response) =>
         this.add this.createContainer(JSON.parse(response.responseText))
+
+        Ext.create 'Ext.ux.PathMenu',{
+          bottom: 10,
+          left: 10,
+          items: [
+            {
+              iconCls: 'action',
+              cardIndex: 0
+            },
+            {
+              iconCls: 'add',
+              cardIndex: 1
+            },
+            {
+              iconCls: 'compose',
+              cardIndex: 2
+            },
+            {
+              iconCls: 'home',
+              cardIndex: 3
+            },
+            {
+              iconCls: 'refresh',
+              cardIndex: 4
+            }
+          ]
+        }
+
   createContainer: (boys)->
     self = this
     verticals = []
